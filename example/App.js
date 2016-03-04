@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Hello from './hello'
+import ConektaCheckout from '../ConektaCheckout'
 
-ReactDOM.render(<Hello />, document.getElementById('react-container'))
+ReactDOM.render(<ConektaCheckout />, document.getElementById('react-container'))
