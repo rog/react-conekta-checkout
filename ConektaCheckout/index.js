@@ -1,9 +1,10 @@
 import React from 'react'
+import styles from './styles.css'
 
 class ReactConektaCheckout extends React.Component {
   render () {
     return (
-      <form className='checkout'>
+      <form className={styles.checkout}>
          <div className='checkout-header'>
            <h1 className='checkout-title'>
              Checkout
