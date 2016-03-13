@@ -5,7 +5,7 @@ class ReactConektaCheckout extends React.Component {
   render () {
     return (
       <form className={styles.checkout}>
-         <div className='checkout-header'>
+         <div className={styles.checkoutHeader}>
            <h1 className='checkout-title'>
              Checkout
              <span className='checkout-price'>$10</span>

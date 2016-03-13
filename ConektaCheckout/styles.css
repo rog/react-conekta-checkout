@@ -22,3 +22,8 @@
 .checkout > p + p {
   margin-top: 15px;
 }
+
+.checkout-header {
+  position: relative;
+  margin: -15px -15px 15px;
+}
