@@ -1,0 +1,24 @@
+.checkout {
+  width: 270px;
+  margin: 50px auto;
+  padding: 15px;
+  background: #f3f6fa;
+  border: 1px solid;
+  border-color: #c2cadb #bbc5d6 #b7c0cd;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+.checkout > p {
+  zoom: 1;
+}
+.checkout > p:before, .checkout > p:after {
+  content: '';
+  display: table;
+}
+.checkout > p:after {
+  clear: both;
+}
+.checkout > p + p {
+  margin-top: 15px;
+}
