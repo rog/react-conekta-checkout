@@ -130,3 +130,11 @@ input {
 .lt-ie9 .checkout-input {
   line-height: 30px;
 }
+
+.checkout-name {
+  width: 150px;
+}
+
+.checkout-card {
+  width: 210px;
+}
