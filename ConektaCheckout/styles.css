@@ -138,3 +138,9 @@ input {
 .checkout-card {
   width: 210px;
 }
+
+.checkout-exp,
+.checkout-cvc {
+  margin-left: 15px;
+  width: 45px;
+}

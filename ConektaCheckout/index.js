@@ -17,8 +17,8 @@ class ReactConektaCheckout extends React.Component {
            <input type='text' className={[styles.checkoutInput, styles.checkoutExp]} placeholder='YY' />
          </p>
          <p>
-           <input type='text' className='checkout-input checkout-card' placeholder='4111 1111 1111 1111' />
-           <input type='text' className='checkout-input checkout-cvc' placeholder='CVC' />
+           <input type='text' className={[styles.checkoutInput, styles.checkoutCard]} placeholder='4111 1111 1111 1111' />
+           <input type='text' className={[styles.checkoutInput, styles.checkoutCvc]} placeholder='CVC' />
          </p>
          <p>
            <input type='submit' value='Purchase' className='checkout-btn' />
