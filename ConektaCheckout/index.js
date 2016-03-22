@@ -21,7 +21,7 @@ class ReactConektaCheckout extends React.Component {
            <input type='text' className={[styles.checkoutInput, styles.checkoutCvc]} placeholder='CVC' />
          </p>
          <p>
-           <input type='submit' value='Purchase' className='checkout-btn' />
+           <input type='submit' value='Purchase' className={styles.checkoutBtn} />
          </p>
        </form>
     )
