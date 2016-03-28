@@ -12,16 +12,38 @@ class ReactConektaCheckout extends React.Component {
            </h1>
          </div>
          <p>
-           <input type='text' className={[styles.checkoutInput, styles.checkoutName]} placeholder='Your name' autoFocus />
-           <input type='text' className={[styles.checkoutInput, styles.checkoutExp]} placeholder='MM' />
-           <input type='text' className={[styles.checkoutInput, styles.checkoutExp]} placeholder='YY' />
+           <input
+             type='text'
+             className={[styles.checkoutInput, styles.checkoutName]}
+             placeholder='Your name'
+             autoFocus />
+
+           <input
+             type='text'
+             className={[styles.checkoutInput, styles.checkoutExp]}
+             placeholder='MM' />
+
+           <input
+             type='text'
+             className={[styles.checkoutInput, styles.checkoutExp]}
+             placeholder='YY' />
          </p>
          <p>
-           <input type='text' className={[styles.checkoutInput, styles.checkoutCard]} placeholder='4111 1111 1111 1111' />
-           <input type='text' className={[styles.checkoutInput, styles.checkoutCvc]} placeholder='CVC' />
+           <input
+             type='text'
+             className={[styles.checkoutInput, styles.checkoutCard]}
+             placeholder='4111 1111 1111 1111' />
+
+           <input
+             type='text'
+             className={[styles.checkoutInput, styles.checkoutCvc]}
+             placeholder='CVC' />
          </p>
          <p>
-           <input type='submit' value='Purchase' className={styles.checkoutBtn} />
+           <input
+             type='submit'
+             value='Purchase'
+             className={styles.checkoutBtn} />
          </p>
        </form>
     )
