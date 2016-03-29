@@ -27,7 +27,7 @@
 
 .checkoutHeader {
   position: relative;
-  margin: -15px -15px 15px;
+  margin: -24px -15px 15px;
 }
 
 .checkoutTitle {
@@ -97,11 +97,7 @@
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
-input {
-  margin: 0;
-  line-height: normal;
-  font-family: inherit;
-  font-size: 100%;
+.checkout input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
