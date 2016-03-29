@@ -1,4 +1,6 @@
 .checkout {
+  font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
+  color: #404040;
   width: 270px;
   margin: 50px auto;
   padding: 15px;
