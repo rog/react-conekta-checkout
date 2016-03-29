@@ -25,12 +25,12 @@
   margin-top: 15px;
 }
 
-.checkout-header {
+.checkoutHeader {
   position: relative;
   margin: -15px -15px 15px;
 }
 
-.checkout-title {
+.checkoutTitle {
   padding: 0 15px;
   line-height: 38px;
   font-size: 13px;
@@ -47,7 +47,7 @@
   -webkit-box-shadow: inset 0 1px white;
   box-shadow: inset 0 1px white;
 }
-.checkout-title:before {
+.checkoutTitle:before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -58,7 +58,7 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
-.checkout-price {
+.checkoutPrice {
   position: absolute;
   top: -14px;
   right: -14px;
@@ -84,7 +84,7 @@
   -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.checkout-price:before {
+.checkoutPrice:before {
   content: '';
   position: absolute;
   top: 3px;
@@ -107,7 +107,7 @@ input {
   box-sizing: border-box;
 }
 
-.checkout-input {
+.checkoutInput {
   float: left;
   padding: 0 7px;
   height: 32px;
@@ -123,31 +123,31 @@ input {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
 }
-.checkout-input:focus {
+.checkoutInput:focus {
   border-color: #46aefe;
   outline: none;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
 }
-.lt-ie9 .checkout-input {
+.lt-ie9 .checkoutInput {
   line-height: 30px;
 }
 
-.checkout-name {
+.checkoutName {
   width: 150px;
 }
 
-.checkout-card {
+.checkoutCard {
   width: 210px;
 }
 
-.checkout-exp,
-.checkout-cvc {
+.checkoutExp,
+.checkoutCvc {
   margin-left: 15px;
   width: 45px;
 }
 
-.checkout-btn {
+.checkoutBtn {
   width: 100%;
   height: 34px;
   padding: 0;
@@ -166,7 +166,7 @@ input {
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-.checkout-btn:active {
+.checkoutBtn:active {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   border-color: #075bba #0c69d2 #0f7de9;
   background-image: -webkit-linear-gradient(top, #1281dc, #1593fc);
