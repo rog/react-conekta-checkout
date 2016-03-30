@@ -8,7 +8,6 @@
   border: 1px solid;
   border-color: #c2cadb #bbc5d6 #b7c0cd;
   border-radius: 7px;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 .checkout > p {
@@ -40,9 +39,6 @@
   background: #eceff5;
   border-bottom: 1px solid #c5ccdb;
   border-radius: 7px 7px 0 0;
-  background-image: -webkit-linear-gradient(top, #f5f8fb, #e9edf3);
-  background-image: -moz-linear-gradient(top, #f5f8fb, #e9edf3);
-  background-image: -o-linear-gradient(top, #f5f8fb, #e9edf3);
   background-image: linear-gradient(to bottom, #f5f8fb, #e9edf3);
   -webkit-box-shadow: inset 0 1px white;
   box-shadow: inset 0 1px white;
@@ -54,7 +50,6 @@
   left: 0;
   right: 0;
   height: 2px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
@@ -73,15 +68,8 @@
   border: 1px solid;
   border-color: #b33323 #ab3123 #982b1f;
   border-radius: 21px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  background-image: -webkit-linear-gradient(top, #f75a3b, #d63b29);
-  background-image: -moz-linear-gradient(top, #f75a3b, #d63b29);
-  background-image: -o-linear-gradient(top, #f75a3b, #d63b29);
   background-image: linear-gradient(to bottom, #f75a3b, #d63b29);
-  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .checkoutPrice:before {
@@ -93,13 +81,10 @@
   right: 3px;
   border: 2px solid #f5f8fb;
   border-radius: 18px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .checkout input {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -112,17 +97,12 @@
   border: 1px solid;
   border-color: #b3c0e2 #bcc5e2 #c0ccea;
   border-radius: 4px;
-  background-image: -webkit-linear-gradient(top, #f6f8fa, white);
-  background-image: -moz-linear-gradient(top, #f6f8fa, white);
-  background-image: -o-linear-gradient(top, #f6f8fa, white);
   background-image: linear-gradient(to bottom, #f6f8fa, white);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
 }
 .checkoutInput:focus {
   border-color: #46aefe;
   outline: none;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
 }
 .lt-ie9 .checkoutInput {
@@ -155,21 +135,13 @@
   border-color: #1486f9 #0f7de9 #0d6acf;
   background: #1993fb;
   border-radius: 4px;
-  background-image: -webkit-linear-gradient(top, #4cb1fe, #229afc 40%, #138df6);
-  background-image: -moz-linear-gradient(top, #4cb1fe, #229afc 40%, #138df6);
-  background-image: -o-linear-gradient(top, #4cb1fe, #229afc 40%, #138df6);
   background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .checkoutBtn:active {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   border-color: #075bba #0c69d2 #0f7de9;
-  background-image: -webkit-linear-gradient(top, #1281dc, #1593fc);
-  background-image: -moz-linear-gradient(top, #1281dc, #1593fc);
-  background-image: -o-linear-gradient(top, #1281dc, #1593fc);
   background-image: linear-gradient(to bottom, #1281dc, #1593fc);
-  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
 }
 
