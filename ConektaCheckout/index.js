@@ -7,13 +7,13 @@ class ReactConektaCheckout extends React.Component {
   render () {
     return (
       <form className={styles.checkout}>
-         <div className={styles.checkoutHeader}>
-           <h1 className={styles.checkoutTitle}>
+         <div className={styles.checkout__header}>
+           <h1 className={styles.checkout__title}>
              Checkout
              <span className={styles.checkoutPrice}>$42</span>
            </h1>
          </div>
-         <p>
+         <p className={styles.checkout__paragraph}>
            <input
              type='text'
              className={classNames(styles.checkoutInput, styles.checkoutName)}
@@ -30,7 +30,7 @@ class ReactConektaCheckout extends React.Component {
              className={classNames(styles.checkoutInput, styles.checkoutExp)}
              placeholder='YY' />
          </p>
-         <p>
+         <p className={styles.checkout__paragraph}>
            <input
              type='text'
              className={classNames(styles.checkoutInput, styles.checkoutCard)}
@@ -41,7 +41,7 @@ class ReactConektaCheckout extends React.Component {
              className={classNames(styles.checkoutInput, styles.checkoutCvc)}
              placeholder='CVC' />
          </p>
-         <p>
+         <p className={styles.checkout__paragraph}>
            <input
              type='submit'
              value='Purchase'

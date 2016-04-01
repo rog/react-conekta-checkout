@@ -20,8 +20,9 @@ module.exports = {
     port: 2000
   },
   postcss: [
-    require('autoprefixer-core'),
-    require('postcss-color-rebeccapurple')
+    require('postcss-simple-vars')(), // ...then replace the variables...
+    require('precss')(),
+    require('autoprefixer-core')
   ],
   module: {
     loaders: [{

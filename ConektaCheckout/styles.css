@@ -1,3 +1,5 @@
+$module: 'checkout';
+
 .checkout {
   font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
   color: #404040;
@@ -9,48 +11,48 @@
   border-color: #c2cadb #bbc5d6 #b7c0cd;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-}
-.checkout > p {
-  zoom: 1;
-}
-.checkout > p:before, .checkout > p:after {
-  content: '';
-  display: table;
-}
-.checkout > p:after {
-  clear: both;
-}
-.checkout > p + p {
-  margin-top: 15px;
-}
-
-.checkoutHeader {
-  position: relative;
-  margin: -24px -15px 15px;
-}
-
-.checkoutTitle {
-  padding: 0 15px;
-  line-height: 38px;
-  font-size: 13px;
-  font-weight: bold;
-  color: #7f889e;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.7);
-  background: #eceff5;
-  border-bottom: 1px solid #c5ccdb;
-  border-radius: 7px 7px 0 0;
-  background-image: linear-gradient(to bottom, #f5f8fb, #e9edf3);
-  -webkit-box-shadow: inset 0 1px white;
-  box-shadow: inset 0 1px white;
-}
-.checkoutTitle:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  &__paragraph {
+    zoom: 1;
+    &:before {
+      content: '';
+      display: table;
+    }
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    + p {
+      margin-top: 15px;
+    }
+  }
+  &__header {
+    position: relative;
+    margin: -24px -15px 15px;
+  }
+  &__title {
+    padding: 0 15px;
+    line-height: 38px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #7f889e;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.7);
+    background: #eceff5;
+    border-bottom: 1px solid #c5ccdb;
+    border-radius: 7px 7px 0 0;
+    background-image: linear-gradient(to bottom, #f5f8fb, #e9edf3);
+    -webkit-box-shadow: inset 0 1px white;
+    box-shadow: inset 0 1px white;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+  }
 }
 
 .checkoutPrice {
