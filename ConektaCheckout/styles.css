@@ -1,5 +1,3 @@
-$module: 'checkout';
-
 .checkout {
   font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
   color: #404040;
@@ -11,6 +9,7 @@ $module: 'checkout';
   border-color: #c2cadb #bbc5d6 #b7c0cd;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+
   &__paragraph {
     zoom: 1;
     &:before {
@@ -26,10 +25,12 @@ $module: 'checkout';
       margin-top: 15px;
     }
   }
+
   &__header {
     position: relative;
     margin: -24px -15px 15px;
   }
+
   &__title {
     padding: 0 15px;
     line-height: 38px;
@@ -53,98 +54,95 @@ $module: 'checkout';
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
     }
   }
+
+  &__price {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 40px;
+    font: 14px/40px Helvetica, Arial, sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+    text-indent: -1px;
+    letter-spacing: -1px;
+    background: #e54930;
+    border: 1px solid;
+    border-color: #b33323 #ab3123 #982b1f;
+    border-radius: 21px;
+    user-select: none;
+    background-image: linear-gradient(to bottom, #f75a3b, #d63b29);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    &:before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      left: 3px;
+      right: 3px;
+      border: 2px solid #f5f8fb;
+      border-radius: 18px;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.25), 0 -1px 1px     rgba(0, 0, 0, 0.25);
+    }
+  }
+  &__input {
+    float: left;
+    padding: 0 7px;
+    height: 32px;
+    color: #525864;
+    background: white;
+    border: 1px solid;
+    border-color: #b3c0e2 #bcc5e2 #c0ccea;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, #f6f8fa, white);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    &:focus {
+      border-color: #46aefe;
+      outline: none;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
+    }
+
+    &--name {
+      width: 150px;
+    }
+
+    &--card {
+      width: 210px;
+    }
+
+    &--exp,
+    &--cvc {
+      margin-left: 15px;
+      width: 45px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: 34px;
+    padding: 0;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid;
+    border-color: #1486f9 #0f7de9 #0d6acf;
+    background: #1993fb;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+    &:active {
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+      border-color: #075bba #0c69d2 #0f7de9;
+      background-image: linear-gradient(to bottom, #1281dc, #1593fc);
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
+    }
+  }
 }
 
-.checkoutPrice {
-  position: absolute;
-  top: -14px;
-  right: -14px;
-  width: 40px;
-  font: 14px/40px Helvetica, Arial, sans-serif;
-  color: white;
-  text-align: center;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
-  text-indent: -1px;
-  letter-spacing: -1px;
-  background: #e54930;
-  border: 1px solid;
-  border-color: #b33323 #ab3123 #982b1f;
-  border-radius: 21px;
-  user-select: none;
-  background-image: linear-gradient(to bottom, #f75a3b, #d63b29);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-.checkoutPrice:before {
-  content: '';
-  position: absolute;
-  top: 3px;
-  bottom: 3px;
-  left: 3px;
-  right: 3px;
-  border: 2px solid #f5f8fb;
-  border-radius: 18px;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.25), 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-
-.checkout input {
-  box-sizing: border-box;
-}
-
-.checkoutInput {
-  float: left;
-  padding: 0 7px;
-  height: 32px;
-  color: #525864;
-  background: white;
-  border: 1px solid;
-  border-color: #b3c0e2 #bcc5e2 #c0ccea;
-  border-radius: 4px;
-  background-image: linear-gradient(to bottom, #f6f8fa, white);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
-}
-.checkoutInput:focus {
-  border-color: #46aefe;
-  outline: none;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px #46aefe;
-}
-.lt-ie9 .checkoutInput {
+.lt-ie9 .checkout__input {
   line-height: 30px;
-}
-
-.checkoutName {
-  width: 150px;
-}
-
-.checkoutCard {
-  width: 210px;
-}
-
-.checkoutExp,
-.checkoutCvc {
-  margin-left: 15px;
-  width: 45px;
-}
-
-.checkoutBtn {
-  width: 100%;
-  height: 34px;
-  padding: 0;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-  border: 1px solid;
-  border-color: #1486f9 #0f7de9 #0d6acf;
-  background: #1993fb;
-  border-radius: 4px;
-  background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-.checkoutBtn:active {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  border-color: #075bba #0c69d2 #0f7de9;
-  background-image: linear-gradient(to bottom, #1281dc, #1593fc);
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.5);
 }
 
 :-moz-placeholder {
