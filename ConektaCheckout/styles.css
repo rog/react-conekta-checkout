@@ -2,14 +2,17 @@
   font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
   color: #404040;
   width: 270px;
-  margin: 50px auto;
   padding: 15px;
   background: #f3f6fa;
   border: 1px solid;
   border-color: #c2cadb #bbc5d6 #b7c0cd;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100000;
   &__paragraph {
     zoom: 1;
     &:before {
@@ -42,7 +45,6 @@
     border-bottom: 1px solid #c5ccdb;
     border-radius: 7px 7px 0 0;
     background-image: linear-gradient(to bottom, #f5f8fb, #e9edf3);
-    -webkit-box-shadow: inset 0 1px white;
     box-shadow: inset 0 1px white;
     &:before {
       content: '';
@@ -141,7 +143,13 @@
   }
 
   &__overlay {
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
   }
 }
 
