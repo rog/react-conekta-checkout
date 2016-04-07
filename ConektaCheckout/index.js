@@ -1,9 +1,25 @@
 import React from 'react'
 import classNames from 'classnames'
+import reactMixin from 'react-mixin'
+import ReactScriptLoaderMixin from 'react-script-loader'
 
 import styles from './styles.css'
 
 class ReactConektaCheckout extends React.Component {
+  constructor (props) {
+    super(props)
+  }
+  // this function tells ReactScriptLoaderMixin where to load the script from
+  getScriptURL () {
+    return 'https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js'
+  }
+
+  // ReactScriptLoaderMixin calls this function when the script has loaded
+  // successfully.
+  onScriptLoaded () {
+    Conekta.setPublishableKey(this.props.publicKey)
+  }
+
   render () {
     return (
       <div>
@@ -78,6 +94,12 @@ class ReactConektaCheckout extends React.Component {
        </div>
     )
   }
+}
+
+reactMixin(ReactConektaCheckout.prototype, ReactScriptLoaderMixin)
+
+ReactConektaCheckout.propTypes = {
+  publicKey: React.PropTypes.string.isRequired
 }
 
 export default ReactConektaCheckout

@@ -32,13 +32,16 @@
     ]
   },
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "globals": ["Conekta"]
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "css-loader": "^0.23.1",
     "postcss-loader": "^0.9.1",
     "react": "^15.0.2",
+    "react-mixin": "^2.0.2",
+    "react-script-loader": "0.0.1",
     "style-loader": "^0.13.1"
   }
 }
