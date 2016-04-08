@@ -24,6 +24,12 @@ class ReactConektaCheckout extends React.Component {
     return (
       <div>
       <div className={styles.checkout__overlay}></div>
+      <div className={classNames({
+        [styles.checkout__https__warning]: true,
+        [styles['checkout__https__warning--show']]: window.location.protocol !== 'https:'
+      })}>
+        <p>HTTPS required</p>
+      </div>
       <form className={styles.checkout}>
          <div className={styles.checkout__header}>
            <h1 className={styles.checkout__title}>
