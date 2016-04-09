@@ -23,13 +23,6 @@ class ReactConektaCheckout extends React.Component {
   render () {
     return (
       <div>
-      <div className={styles.checkout__overlay}></div>
-      <div className={classNames({
-        [styles.checkout__https__warning]: true,
-        [styles['checkout__https__warning--show']]: window.location.protocol !== 'https:'
-      })}>
-        <p>HTTPS required</p>
-      </div>
       <form className={styles.checkout}>
          <div className={styles.checkout__header}>
            <h1 className={styles.checkout__title}>
@@ -97,6 +90,17 @@ class ReactConektaCheckout extends React.Component {
              className={styles.checkout__button} />
          </p>
        </form>
+       <div className={styles.checkout__overlay}></div>
+       <div className={
+           classNames({
+             [styles.checkout__https__warning]: true,
+             [styles['checkout__https__warning--show']]: window.location.protocol !== 'https:'
+           })
+       }>
+         <p>HTTPS required</p>
+       </div>
+       <div classNames={styles.checkout__powered}>
+       </div>
        </div>
     )
   }
