@@ -4,6 +4,7 @@ import reactMixin from 'react-mixin'
 import ReactScriptLoaderMixin from 'react-script-loader'
 
 import styles from './styles.css'
+import LogoConekta from './LogoConekta'
 
 class ReactConektaCheckout extends React.Component {
   constructor (props) {
@@ -100,6 +101,7 @@ class ReactConektaCheckout extends React.Component {
          <p>HTTPS required</p>
        </div>
        <div classNames={styles.checkout__powered}>
+         <LogoConekta />
        </div>
        </div>
     )
