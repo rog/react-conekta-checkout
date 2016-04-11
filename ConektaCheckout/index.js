@@ -100,7 +100,7 @@ class ReactConektaCheckout extends React.Component {
        }>
          <p>HTTPS required</p>
        </div>
-       <div classNames={styles.checkout__powered}>
+       <div className={styles.checkout__powered}>
          <LogoConekta />
        </div>
        </div>

@@ -1,12 +1,28 @@
 import React from 'react'
+import styles from './styles.css'
 
 class LogoConekta extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      theme: 'grayscale'
+      theme: ''
     }
+    this.mouseOver = this.mouseOver.bind(this)
+    this.mouseOut = this.mouseOut.bind(this)
   }
+
+  componentWillMount () {
+    this.setState({theme: 'grayscale'})
+  }
+
+  mouseOver () {
+    this.setState({theme: 'color'})
+  }
+
+  mouseOut () {
+    this.setState({theme: 'grayscale'})
+  }
+
   render () {
     const colors = {
       color: {
@@ -16,15 +32,22 @@ class LogoConekta extends React.Component {
         rightArrow: '#009fa5'
       },
       grayscale: {
-        textFill: '#464646',
+        textFill: '#ccc',
         leftArrow: '#8b8b8b',
         leftArrowShadow: '#727272',
         rightArrow: '#898989'
       }
     }
-
     return (
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1056 816'>
+      <div
+        onMouseEnter={this.mouseOver}
+        onMouseLeave={this.mouseOut}
+      >
+      <svg xmlns='http://www.w3.org/2000/svg'
+        className={styles.checkout__powered__logo}
+        viewBox='300 300 470 200'
+        width='160' height='50'
+      >
         <defs>
           <clipPath id='a'>
             <path d='M0 612h792V0H0z'/>
@@ -47,12 +70,9 @@ class LogoConekta extends React.Component {
           </g>
         </g>
       </svg>
+      </div>
     )
   }
-}
-
-LogoConekta.propTypes = {
-  theme: React.PropTypes.string
 }
 
 export default LogoConekta

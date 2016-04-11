@@ -152,7 +152,7 @@ $zindex: 99999;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
   }
 
   &__https__warning {
@@ -166,6 +166,19 @@ $zindex: 99999;
     display: none;
     &--show {
       display: block;
+    }
+  }
+
+  &__powered {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    z-index: calc($zindex + 1);
+    &__logo {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
