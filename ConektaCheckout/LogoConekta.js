@@ -24,6 +24,7 @@ class LogoConekta extends React.Component {
   }
 
   render () {
+    const conektaHomePage = 'https://www.conekta.io/'
     const colors = {
       color: {
         textFill: '#ccc',
@@ -40,7 +41,7 @@ class LogoConekta extends React.Component {
     }
     return (
       <div onMouseEnter={this.mouseOver} onMouseLeave={this.mouseOut} >
-      <a href='https://www.conekta.io/' target='_blank'>
+      <a href={conektaHomePage} target='_blank'>
       <svg xmlns='http://www.w3.org/2000/svg'
         className={styles.checkout__powered__logo}
         viewBox='300 300 470 200'
