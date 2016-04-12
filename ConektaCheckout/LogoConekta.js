@@ -26,7 +26,7 @@ class LogoConekta extends React.Component {
   render () {
     const colors = {
       color: {
-        textFill: '#4b5462',
+        textFill: '#ccc',
         leftArrow: '#e7694a',
         leftArrowShadow: '#c35838',
         rightArrow: '#009fa5'
@@ -39,10 +39,8 @@ class LogoConekta extends React.Component {
       }
     }
     return (
-      <div
-        onMouseEnter={this.mouseOver}
-        onMouseLeave={this.mouseOut}
-      >
+      <div onMouseEnter={this.mouseOver} onMouseLeave={this.mouseOut} >
+      <a href='https://www.conekta.io/' target='_blank'>
       <svg xmlns='http://www.w3.org/2000/svg'
         className={styles.checkout__powered__logo}
         viewBox='300 300 470 200'
@@ -70,6 +68,7 @@ class LogoConekta extends React.Component {
           </g>
         </g>
       </svg>
+      </a>
       </div>
     )
   }
