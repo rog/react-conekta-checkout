@@ -23,86 +23,89 @@ class ReactConektaCheckout extends React.Component {
 
   render () {
     return (
-      <div>
-      <form className={styles.checkout}>
-         <div className={styles.checkout__header}>
-           <h1 className={styles.checkout__title}>
-             Checkout
-             <span className={styles.checkout__price}>$42</span>
-           </h1>
+      <div className={classNames({
+        [styles.checkout__wrapper]: true,
+        [styles['checkout__wrapper--show']]: this.props.show
+      })}>
+        <form className={styles.checkout}>
+           <div className={styles.checkout__header}>
+             <h1 className={styles.checkout__title}>
+               Checkout
+               <span className={styles.checkout__price}>$42</span>
+             </h1>
+           </div>
+           <p className={styles.checkout__paragraph}>
+             <input
+               type='text'
+               className={
+                 classNames(
+                   styles.checkout__input,
+                   styles['checkout__input--name']
+                 )
+               }
+               placeholder='Your name'
+               autoFocus />
+
+             <input
+               type='text'
+               className={
+                 classNames(
+                   styles.checkout__input,
+                   styles['checkout__input--exp']
+                 )
+               }
+               placeholder='MM' />
+
+             <input
+               type='text'
+               className={
+                 classNames(
+                   styles.checkout__input,
+                   styles['checkout__input--exp']
+                 )
+               }
+               placeholder='YY' />
+           </p>
+           <p className={styles.checkout__paragraph}>
+             <input
+               type='text'
+               className={
+                 classNames(
+                   styles.checkout__input,
+                   styles['checkout__input--card']
+                 )
+               }
+               placeholder='4111 1111 1111 1111' />
+
+             <input
+               type='text'
+               className={
+                 classNames(
+                   styles.checkout__input,
+                   styles['checkout__input--cvc']
+                 )
+               }
+               placeholder='CVC' />
+           </p>
+           <p className={styles.checkout__paragraph}>
+             <input
+               type='submit'
+               value='Purchase'
+               className={styles.checkout__button} />
+           </p>
+         </form>
+         <div className={styles.checkout__overlay}></div>
+         <div className={
+             classNames({
+               [styles.checkout__https__warning]: true,
+               [styles['checkout__https__warning--show']]: window.location.protocol !== 'https:'
+             })
+         }>
+           <p>HTTPS required</p>
          </div>
-         <p className={styles.checkout__paragraph}>
-           <input
-             type='text'
-             className={
-               classNames(
-                 styles.checkout__input,
-                 styles['checkout__input--name']
-               )
-             }
-             placeholder='Your name'
-             autoFocus />
-
-           <input
-             type='text'
-             className={
-               classNames(
-                 styles.checkout__input,
-                 styles['checkout__input--exp']
-               )
-             }
-             placeholder='MM' />
-
-           <input
-             type='text'
-             className={
-               classNames(
-                 styles.checkout__input,
-                 styles['checkout__input--exp']
-               )
-             }
-             placeholder='YY' />
-         </p>
-         <p className={styles.checkout__paragraph}>
-           <input
-             type='text'
-             className={
-               classNames(
-                 styles.checkout__input,
-                 styles['checkout__input--card']
-               )
-             }
-             placeholder='4111 1111 1111 1111' />
-
-           <input
-             type='text'
-             className={
-               classNames(
-                 styles.checkout__input,
-                 styles['checkout__input--cvc']
-               )
-             }
-             placeholder='CVC' />
-         </p>
-         <p className={styles.checkout__paragraph}>
-           <input
-             type='submit'
-             value='Purchase'
-             className={styles.checkout__button} />
-         </p>
-       </form>
-       <div className={styles.checkout__overlay}></div>
-       <div className={
-           classNames({
-             [styles.checkout__https__warning]: true,
-             [styles['checkout__https__warning--show']]: window.location.protocol !== 'https:'
-           })
-       }>
-         <p>HTTPS required</p>
-       </div>
-       <div className={styles.checkout__powered}>
-         <LogoConekta />
-       </div>
+         <div className={styles.checkout__powered}>
+           <LogoConekta />
+         </div>
        </div>
     )
   }
@@ -111,7 +114,8 @@ class ReactConektaCheckout extends React.Component {
 reactMixin(ReactConektaCheckout.prototype, ReactScriptLoaderMixin)
 
 ReactConektaCheckout.propTypes = {
-  publicKey: React.PropTypes.string.isRequired
+  publicKey: React.PropTypes.string.isRequired,
+  show: React.PropTypes.bool
 }
 
 export default ReactConektaCheckout

@@ -16,6 +16,14 @@ $zindex: 99999;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: calc($zindex + 1);
+
+  &__wrapper {
+    display: none;
+  }
+  &__wrapper--show {
+    display: block;
+  }
+
   &__paragraph {
     zoom: 1;
     &:before {
