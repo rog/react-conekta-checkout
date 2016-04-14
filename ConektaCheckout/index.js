@@ -27,7 +27,7 @@ class ReactConektaCheckout extends React.Component {
         [styles.checkout__wrapper]: true,
         [styles['checkout__wrapper--show']]: this.props.show
       })}>
-        <form className={styles.checkout}>
+        <form className={styles.checkout__form}>
            <div className={styles.checkout__header}>
              <h1 className={styles.checkout__title}>
                Checkout

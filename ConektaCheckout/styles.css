@@ -2,26 +2,28 @@ $fontface: 'Lucida Grande', Verdana, sans-serif;
 $zindex: 99999;
 
 .checkout {
-  font: 13px/20px $fontface;
-  color: #404040;
-  width: 270px;
-  padding: 15px;
-  background: #f3f6fa;
-  border: 1px solid;
-  border-color: #c2cadb #bbc5d6 #b7c0cd;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: calc($zindex + 1);
-
   &__wrapper {
     display: none;
   }
   &__wrapper--show {
     display: block;
+  }
+
+  &__form {
+    font: 13px/20px $fontface;
+    color: #404040;
+    width: 270px;
+    padding: 15px;
+    background: #f3f6fa;
+    border: 1px solid;
+    border-color: #c2cadb #bbc5d6 #b7c0cd;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: calc($zindex + 1);
   }
 
   &__paragraph {
