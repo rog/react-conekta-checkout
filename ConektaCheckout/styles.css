@@ -4,9 +4,9 @@ $zindex: 99999;
 .checkout {
   &__wrapper {
     display: none;
-  }
-  &__wrapper--show {
-    display: block;
+    &--show {
+      display: block;
+    }
   }
 
   &__form {
@@ -24,6 +24,24 @@ $zindex: 99999;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: calc($zindex + 1);
+
+    &__wrapper {
+      display: none;
+      &--show {
+        display: block;
+      }
+    }
+
+    &__message {
+      display: none;
+      text-align: center;
+      font-size: 15px;
+      color: #7f889e;
+      text-shadow: 0 1px rgba(255, 255, 255, 0.7);
+      &--show {
+        display: block;
+      }
+    }
   }
 
   &__paragraph {

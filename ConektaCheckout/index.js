@@ -28,6 +28,10 @@ class ReactConektaCheckout extends React.Component {
         [styles['checkout__wrapper--show']]: this.props.show
       })}>
         <form className={styles.checkout__form}>
+        <div className={classNames({
+          [styles.checkout__form__wrapper]: true,
+          [styles['checkout__form__wrapper--show']]: false
+        })}>
            <div className={styles.checkout__header}>
              <h1 className={styles.checkout__title}>
                Checkout
@@ -93,6 +97,13 @@ class ReactConektaCheckout extends React.Component {
                value='Purchase'
                className={styles.checkout__button} />
            </p>
+         </div>
+         <div className={classNames({
+           [styles.checkout__form__message]: true,
+           [styles['checkout__form__message--show']]: true
+         })}>
+         <p>Thank You For Your Purchase</p>
+         </div>
          </form>
          <div className={styles.checkout__overlay}></div>
          <div className={
