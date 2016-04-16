@@ -9,6 +9,10 @@ import LogoConekta from './LogoConekta'
 class ReactConektaCheckout extends React.Component {
   constructor (props) {
     super(props)
+    this.state = {
+      purchase: false
+    }
+    this.purchase = this.purchase.bind(this)
   }
   // this function tells ReactScriptLoaderMixin where to load the script from
   getScriptURL () {
@@ -21,89 +25,97 @@ class ReactConektaCheckout extends React.Component {
     Conekta.setPublishableKey(this.props.publicKey)
   }
 
+  purchase (e) {
+    e.preventDefault()
+    this.setState({purchase: !this.state.purchase})
+  }
+
   render () {
     return (
       <div className={classNames({
         [styles.checkout__wrapper]: true,
         [styles['checkout__wrapper--show']]: this.props.show
       })}>
-        <form className={styles.checkout__form}>
-        <div className={classNames({
-          [styles.checkout__form__wrapper]: true,
-          [styles['checkout__form__wrapper--show']]: false
-        })}>
-           <div className={styles.checkout__header}>
-             <h1 className={styles.checkout__title}>
-               Checkout
-               <span className={styles.checkout__price}>$42</span>
-             </h1>
+        <form className={styles.checkout__form} onSubmit={this.purchase}>
+
+          <div className={classNames({
+            [styles.checkout__form__wrapper]: true,
+            [styles['checkout__form__wrapper--show']]: !this.state.purchase
+          })}>
+             <div className={styles.checkout__header}>
+               <h1 className={styles.checkout__title}>
+                 Checkout
+                 <span className={styles.checkout__price}>$42</span>
+               </h1>
+             </div>
+             <p className={styles.checkout__paragraph}>
+               <input
+                 type='text'
+                 className={
+                   classNames(
+                     styles.checkout__input,
+                     styles['checkout__input--name']
+                   )
+                 }
+                 placeholder='Your name'
+                 autoFocus />
+
+               <input
+                 type='text'
+                 className={
+                   classNames(
+                     styles.checkout__input,
+                     styles['checkout__input--exp']
+                   )
+                 }
+                 placeholder='MM' />
+
+               <input
+                 type='text'
+                 className={
+                   classNames(
+                     styles.checkout__input,
+                     styles['checkout__input--exp']
+                   )
+                 }
+                 placeholder='YY' />
+             </p>
+             <p className={styles.checkout__paragraph}>
+               <input
+                 type='text'
+                 className={
+                   classNames(
+                     styles.checkout__input,
+                     styles['checkout__input--card']
+                   )
+                 }
+                 placeholder='4111 1111 1111 1111' />
+
+               <input
+                 type='text'
+                 className={
+                   classNames(
+                     styles.checkout__input,
+                     styles['checkout__input--cvc']
+                   )
+                 }
+                 placeholder='CVC' />
+             </p>
+             <p className={styles.checkout__paragraph}>
+               <input
+                 type='submit'
+                 value='Purchase'
+                 className={styles.checkout__button} />
+             </p>
            </div>
-           <p className={styles.checkout__paragraph}>
-             <input
-               type='text'
-               className={
-                 classNames(
-                   styles.checkout__input,
-                   styles['checkout__input--name']
-                 )
-               }
-               placeholder='Your name'
-               autoFocus />
 
-             <input
-               type='text'
-               className={
-                 classNames(
-                   styles.checkout__input,
-                   styles['checkout__input--exp']
-                 )
-               }
-               placeholder='MM' />
+           <div className={classNames({
+             [styles.checkout__form__messages]: true,
+             [styles['checkout__form__messages--show']]: this.state.purchase
+           })}>
+             <p>Thank You For Your Purchase</p>
+           </div>
 
-             <input
-               type='text'
-               className={
-                 classNames(
-                   styles.checkout__input,
-                   styles['checkout__input--exp']
-                 )
-               }
-               placeholder='YY' />
-           </p>
-           <p className={styles.checkout__paragraph}>
-             <input
-               type='text'
-               className={
-                 classNames(
-                   styles.checkout__input,
-                   styles['checkout__input--card']
-                 )
-               }
-               placeholder='4111 1111 1111 1111' />
-
-             <input
-               type='text'
-               className={
-                 classNames(
-                   styles.checkout__input,
-                   styles['checkout__input--cvc']
-                 )
-               }
-               placeholder='CVC' />
-           </p>
-           <p className={styles.checkout__paragraph}>
-             <input
-               type='submit'
-               value='Purchase'
-               className={styles.checkout__button} />
-           </p>
-         </div>
-         <div className={classNames({
-           [styles.checkout__form__message]: true,
-           [styles['checkout__form__message--show']]: true
-         })}>
-         <p>Thank You For Your Purchase</p>
-         </div>
          </form>
          <div className={styles.checkout__overlay}></div>
          <div className={

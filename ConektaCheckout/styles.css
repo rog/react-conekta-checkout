@@ -32,7 +32,7 @@ $zindex: 99999;
       }
     }
 
-    &__message {
+    &__messages {
       display: none;
       text-align: center;
       font-size: 15px;
