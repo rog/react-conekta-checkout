@@ -1,4 +1,6 @@
 import React from 'react'
+
+import 'whatwg-fetch'
 import classNames from 'classnames'
 import reactMixin from 'react-mixin'
 import ReactScriptLoaderMixin from 'react-script-loader'
@@ -13,6 +15,15 @@ class ReactConektaCheckout extends React.Component {
       purchase: false
     }
     this.purchase = this.purchase.bind(this)
+    this.tokenizeCard = this.tokenizeCard.bind(this)
+    this.getScriptURL = this.getScriptURL.bind(this)
+    this.onScriptLoaded = this.onScriptLoaded.bind(this)
+    this.errorResponseHandler = this.errorResponseHandler.bind(this)
+    this.successResponseHandler = this.successResponseHandler.bind(this)
+  }
+
+  componentWillMount () {
+    this.getScriptURL()
   }
   // this function tells ReactScriptLoaderMixin where to load the script from
   getScriptURL () {
@@ -25,9 +36,45 @@ class ReactConektaCheckout extends React.Component {
     Conekta.setPublishableKey(this.props.publicKey)
   }
 
+  successResponseHandler (token) {
+    fetch(`/process_payment?token_id=${token.id}`, {
+      method: 'POST'
+    }).then((response) => {
+      console.log(response)
+    })
+  }
+
+  errorResponseHandler (error) {
+    return console.log(error)
+  }
+
+  tokenizeCard () {
+    const tokenParams = {
+      card: {
+        number: '4242424242424242',
+        name: 'Javier Pedreiro',
+        exp_year: '2014',
+        exp_month: '12',
+        cvc: '123',
+        address: {
+          street1: 'Calle 123 Int 404',
+          street2: 'Col. Condesa',
+          city: 'Ciudad de Mexico',
+          state: 'Distrito Federal',
+          zip: '12345',
+          country: 'Mexico'
+        }
+      }
+    }
+
+    Conekta.token.create(tokenParams, this.successResponseHandler, this.errorResponseHandler)
+  }
+
   purchase (e) {
     e.preventDefault()
-    this.setState({purchase: !this.state.purchase})
+    Conekta.setPublishableKey(this.props.publicKey)
+    this.tokenizeCard()
+    // this.setState({purchase: !this.state.purchase})
   }
 
   render () {

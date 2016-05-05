@@ -1,4 +1,5 @@
 var path = require('path')
+const webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
@@ -14,6 +15,10 @@ module.exports = {
     new ExtractTextPlugin('style.css', { allChunks: true }),
     new HtmlWebpackPlugin({
       template: 'index.html'
+    }),
+    new webpack.ProvidePlugin({
+      // make fetch available
+      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     })
   ],
   devServer: {

@@ -33,6 +33,7 @@
     "babel-preset-react": "^6.5.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.16.1",
+    "imports-loader": "^0.6.5",
     "postcss-simple-vars": "^1.2.0",
     "precss": "^1.4.0",
     "style-loader": "^0.13.1",
