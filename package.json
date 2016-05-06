@@ -27,8 +27,6 @@
     "css-loader": "^0.23.1",
     "postcss-loader": "^0.9.1",
     "react": "^15.0.2",
-    "react-mixin": "^2.0.2",
-    "react-script-loader": "0.0.1",
     "style-loader": "^0.13.1",
     "whatwg-fetch": "^1.0.0"
   },

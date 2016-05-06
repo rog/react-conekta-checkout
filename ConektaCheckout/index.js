@@ -2,8 +2,6 @@ import React from 'react'
 
 import 'whatwg-fetch'
 import classNames from 'classnames'
-import reactMixin from 'react-mixin'
-import ReactScriptLoaderMixin from 'react-script-loader'
 
 import styles from './styles.css'
 import LogoConekta from './LogoConekta'
@@ -12,28 +10,32 @@ class ReactConektaCheckout extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      purchase: false
+      purchase: false,
+      scriptLoaded: false
     }
     this.purchase = this.purchase.bind(this)
     this.tokenizeCard = this.tokenizeCard.bind(this)
-    this.getScriptURL = this.getScriptURL.bind(this)
-    this.onScriptLoaded = this.onScriptLoaded.bind(this)
+    this.loadScriptURL = this.loadScriptURL.bind(this)
     this.errorResponseHandler = this.errorResponseHandler.bind(this)
     this.successResponseHandler = this.successResponseHandler.bind(this)
   }
 
   componentWillMount () {
-    this.getScriptURL()
+    this.loadScriptURL()
   }
-  // this function tells ReactScriptLoaderMixin where to load the script from
-  getScriptURL () {
-    return 'https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js'
+  componentDidMount () {
+    if (this.state.scriptLoaded) {
+      Conekta.setPublishableKey(this.props.publicKey)
+    }
   }
 
-  // ReactScriptLoaderMixin calls this function when the script has loaded
-  // successfully.
-  onScriptLoaded () {
-    Conekta.setPublishableKey(this.props.publicKey)
+  loadScriptURL () {
+    const script = document.createElement('script')
+    script.src = 'https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js'
+    script.async = 1
+    script.onload = () => {
+      this.setState({scriptLoaded: true})
+    }
   }
 
   successResponseHandler (token) {
@@ -180,8 +182,6 @@ class ReactConektaCheckout extends React.Component {
     )
   }
 }
-
-reactMixin(ReactConektaCheckout.prototype, ReactScriptLoaderMixin)
 
 ReactConektaCheckout.propTypes = {
   publicKey: React.PropTypes.string.isRequired,
