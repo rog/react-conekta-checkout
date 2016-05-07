@@ -34,8 +34,15 @@ class ReactConektaCheckout extends React.Component {
     script.src = 'https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js'
     script.async = 1
     script.onload = () => {
-      this.setState({scriptLoaded: true})
+      if (Conekta !== undefined) {
+        this.setState({scriptLoaded: true})
+      }
     }
+    script.onerror = () => {
+      this.setState({scriptLoaded: false})
+      throw new Error('Error: Conekta script wansn\'t loaded.')
+    }
+    document.body.appendChild(script)
   }
 
   successResponseHandler (token) {
