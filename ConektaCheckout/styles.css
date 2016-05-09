@@ -1,7 +1,7 @@
 $fontface: 'Lucida Grande', Verdana, sans-serif;
 $zindex: 99999;
 
-.checkout {
+.Checkout {
   &__wrapper {
     display: none;
     &--show {
@@ -173,6 +173,15 @@ $zindex: 99999;
     }
   }
 
+  &__loader {
+    svg{
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      display:inline-block;
+    }
+  }
+
   &__overlay {
     position: absolute;
     z-index: $zindex;
@@ -183,7 +192,7 @@ $zindex: 99999;
     background: rgba(0, 0, 0, 0.7);
   }
 
-  &__https__warning {
+  &__httpsWarning {
     background: #ed6c63;
     color: white;
     border-radius: 3px;

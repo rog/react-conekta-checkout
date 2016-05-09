@@ -5,6 +5,7 @@ import classNames from 'classnames'
 
 import styles from './styles.css'
 import LogoConekta from './LogoConekta'
+import Loader from './Loader'
 
 class ReactConektaCheckout extends React.Component {
   constructor (props) {
@@ -89,28 +90,30 @@ class ReactConektaCheckout extends React.Component {
   render () {
     return (
       <div className={classNames({
-        [styles.checkout__wrapper]: true,
-        [styles['checkout__wrapper--show']]: this.props.show
+        [styles.Checkout__wrapper]: true,
+        [styles['Checkout__wrapper--show']]: this.props.show
       })}>
-        <form className={styles.checkout__form} onSubmit={this.purchase}>
+        <div className={styles.Checkout__loader}>
+        </div>
+        <form className={styles.Checkout__form} onSubmit={this.purchase}>
 
           <div className={classNames({
-            [styles.checkout__form__wrapper]: true,
-            [styles['checkout__form__wrapper--show']]: !this.state.purchase
+            [styles.Checkout__form__wrapper]: true,
+            [styles['Checkout__form__wrapper--show']]: !this.state.purchase
           })}>
-             <div className={styles.checkout__header}>
-               <h1 className={styles.checkout__title}>
+             <div className={styles.Checkout__header}>
+               <h1 className={styles.Checkout__title}>
                  Checkout
-                 <span className={styles.checkout__price}>$42</span>
+                 <span className={styles.Checkout__price}>$42</span>
                </h1>
              </div>
-             <p className={styles.checkout__paragraph}>
+             <p className={styles.Checkout__paragraph}>
                <input
                  type='text'
                  className={
                    classNames(
-                     styles.checkout__input,
-                     styles['checkout__input--name']
+                     styles.Checkout__input,
+                     styles['Checkout__input--name']
                    )
                  }
                  placeholder='Your name'
@@ -120,8 +123,8 @@ class ReactConektaCheckout extends React.Component {
                  type='text'
                  className={
                    classNames(
-                     styles.checkout__input,
-                     styles['checkout__input--exp']
+                     styles.Checkout__input,
+                     styles['Checkout__input--exp']
                    )
                  }
                  placeholder='MM' />
@@ -130,19 +133,19 @@ class ReactConektaCheckout extends React.Component {
                  type='text'
                  className={
                    classNames(
-                     styles.checkout__input,
-                     styles['checkout__input--exp']
+                     styles.Checkout__input,
+                     styles['Checkout__input--exp']
                    )
                  }
                  placeholder='YY' />
              </p>
-             <p className={styles.checkout__paragraph}>
+             <p className={styles.Checkout__paragraph}>
                <input
                  type='text'
                  className={
                    classNames(
-                     styles.checkout__input,
-                     styles['checkout__input--card']
+                     styles.Checkout__input,
+                     styles['Checkout__input--card']
                    )
                  }
                  placeholder='4111 1111 1111 1111' />
@@ -151,38 +154,38 @@ class ReactConektaCheckout extends React.Component {
                  type='text'
                  className={
                    classNames(
-                     styles.checkout__input,
-                     styles['checkout__input--cvc']
+                     styles.Checkout__input,
+                     styles['Checkout__input--cvc']
                    )
                  }
                  placeholder='CVC' />
              </p>
-             <p className={styles.checkout__paragraph}>
+             <p className={styles.Checkout__paragraph}>
                <input
                  type='submit'
                  value='Purchase'
-                 className={styles.checkout__button} />
+                 className={styles.Checkout__button} />
              </p>
            </div>
 
            <div className={classNames({
-             [styles.checkout__form__messages]: true,
-             [styles['checkout__form__messages--show']]: this.state.purchase
+             [styles.Checkout__form__messages]: true,
+             [styles['Checkout__form__messages--show']]: this.state.purchase
            })}>
              <p>Thank You For Your Purchase</p>
            </div>
 
          </form>
-         <div className={styles.checkout__overlay}></div>
+         <div className={styles.Checkout__overlay}></div>
          <div className={
              classNames({
-               [styles.checkout__https__warning]: true,
-               [styles['checkout__https__warning--show']]: window.location.protocol !== 'https:'
+               [styles.Checkout__httpsWarning]: true,
+               [styles['Checkout__httpsWarning--show']]: window.location.protocol !== 'https:'
              })
          }>
            <p>HTTPS required</p>
          </div>
-         <div className={styles.checkout__powered}>
+         <div className={styles.Checkout__powered}>
            <LogoConekta />
          </div>
        </div>
