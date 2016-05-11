@@ -41,7 +41,7 @@ class ReactConektaCheckout extends React.Component {
     }
     script.onerror = () => {
       this.setState({scriptLoaded: false})
-      throw new Error('Error: Conekta script wansn\'t loaded.')
+      throw new Error('Error: Conekta script wasn\'t loaded.')
     }
     document.body.appendChild(script)
   }
@@ -94,6 +94,7 @@ class ReactConektaCheckout extends React.Component {
         [styles['Checkout__wrapper--show']]: this.props.show
       })}>
         <div className={styles.Checkout__loader}>
+          <Loader />
         </div>
         <form className={styles.Checkout__form} onSubmit={this.purchase}>
 
