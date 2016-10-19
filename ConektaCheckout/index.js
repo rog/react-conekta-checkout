@@ -102,11 +102,11 @@ class ReactConektaCheckout extends React.Component {
             [styles.Checkout__form__wrapper]: true,
             [styles['Checkout__form__wrapper--show']]: !this.state.purchase
           })}>
-             <div className={styles.Checkout__header}>
-               <h1 className={styles.Checkout__title}>
+            <div className={styles.Checkout__header}>
+              <h1 className={styles.Checkout__title}>
                  Checkout
                  <span className={styles.Checkout__price}>$42</span>
-               </h1>
+              </h1>
              </div>
              <p className={styles.Checkout__paragraph}>
                <input

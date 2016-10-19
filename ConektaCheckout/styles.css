@@ -1,4 +1,4 @@
-$fontface: 'Lucida Grande', Verdana, sans-serif;
+$fontface: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 $zindex: 99999;
 
 .Checkout {
@@ -197,7 +197,9 @@ $zindex: 99999;
     color: white;
     border-radius: 3px;
     padding: 5px 20px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: calc($zindex + 1);
     font: 12px/20px $fontface;
     display: none;
