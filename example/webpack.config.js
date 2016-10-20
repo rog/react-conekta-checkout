@@ -12,7 +12,17 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new ExtractTextPlugin('style.css', { allChunks: true }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        context: '/',
+        postcss: [
+          require('postcss-simple-vars')(), // ...then replace the variables...
+          require('precss')(),
+          require('autoprefixer')
+        ]
+      }
+    }),
+    new ExtractTextPlugin({filename: 'style.css',allChunks: true}),
     new HtmlWebpackPlugin({
       template: 'index.html'
     }),
@@ -24,11 +34,6 @@ module.exports = {
   devServer: {
     port: 2000
   },
-  postcss: [
-    require('postcss-simple-vars')(), // ...then replace the variables...
-    require('precss')(),
-    require('autoprefixer-core')
-  ],
   module: {
     loaders: [{
       test: /\.js$/,
@@ -39,7 +44,13 @@ module.exports = {
       }
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
+      loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: [
+          `css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]`,
+          `postcss-loader`
+        ].join('!')
+      })
     }]
   }
 }
