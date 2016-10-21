@@ -27,8 +27,7 @@ module.exports = {
       template: 'index.html'
     }),
     new webpack.ProvidePlugin({
-      // make fetch available
-      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+      'window.fetch': 'exports-loader?self.fetch!fetch-everywhere'
     })
   ],
   devServer: {
@@ -40,7 +39,7 @@ module.exports = {
       exclude: /(node_modules)/,
       loader: 'babel-loader',
       query: {
-        presets: ['es2015', 'react']
+        presets: ['env', 'react']
       }
     }, {
       test: /\.css$/,

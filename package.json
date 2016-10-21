@@ -23,14 +23,20 @@
   },
   "homepage": "https://github.com/rog/react-conekta-checkout#readme",
   "dependencies": {
-
+    "classnames": "^2.2.5",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
-
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1"
   },
   "babel": {
     "presets": [
-      "es2015"
+      "env"
     ]
   },
   "standard": {
