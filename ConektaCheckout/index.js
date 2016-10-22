@@ -107,89 +107,86 @@ class ReactConektaCheckout extends React.Component {
                  Checkout
                  <span className={styles.Checkout__price}>$42</span>
               </h1>
-             </div>
-             <p className={styles.Checkout__paragraph}>
-               <input
-                 type='text'
-                 className={
-                   classNames(
-                     styles.Checkout__input,
-                     styles['Checkout__input--name']
-                   )
-                 }
-                 placeholder='Your name'
-                 autoFocus />
-
-               <input
-                 type='text'
-                 className={
-                   classNames(
-                     styles.Checkout__input,
-                     styles['Checkout__input--exp']
-                   )
-                 }
-                 placeholder='MM' />
-
-               <input
-                 type='text'
-                 className={
-                   classNames(
-                     styles.Checkout__input,
-                     styles['Checkout__input--exp']
-                   )
-                 }
-                 placeholder='YY' />
-             </p>
-             <p className={styles.Checkout__paragraph}>
-               <input
-                 type='text'
-                 className={
-                   classNames(
-                     styles.Checkout__input,
-                     styles['Checkout__input--card']
-                   )
-                 }
-                 placeholder='4111 1111 1111 1111' />
-
-               <input
-                 type='text'
-                 className={
-                   classNames(
-                     styles.Checkout__input,
+            </div>
+            <p className={styles.Checkout__paragraph}>
+              <input
+                type='text'
+                className={
+                  classNames(
+                    styles.Checkout__input,
+                    styles['Checkout__input--name']
+                  )
+                }
+                placeholder='Your name'
+                autoFocus />
+              <input
+                type='text'
+                className={
+                  classNames(
+                    styles.Checkout__input,
+                    styles['Checkout__input--exp']
+                  )
+                }
+                placeholder='MM' />
+              <input
+                type='text'
+                className={
+                  classNames(
+                    styles.Checkout__input,
+                    styles['Checkout__input--exp']
+                  )
+                }
+                placeholder='YY' />
+            </p>
+            <p className={styles.Checkout__paragraph}>
+              <input
+                type='text'
+                className={
+                  classNames(
+                    styles.Checkout__input,
+                    styles['Checkout__input--card']
+                  )
+                }
+                placeholder='4111 1111 1111 1111' />
+              <input
+                type='text'
+                className={
+                  classNames(
+                    styles.Checkout__input,
                      styles['Checkout__input--cvc']
                    )
                  }
-                 placeholder='CVC' />
-             </p>
-             <p className={styles.Checkout__paragraph}>
-               <input
-                 type='submit'
-                 value='Purchase'
-                 className={styles.Checkout__button} />
-             </p>
-           </div>
+                placeholder='CVC' />
+            </p>
+            <p className={styles.Checkout__paragraph}>
+              <input
+                type='submit'
+                value='Purchase'
+                className={styles.Checkout__button} />
+            </p>
+          </div>
 
-           <div className={classNames({
-             [styles.Checkout__form__messages]: true,
-             [styles['Checkout__form__messages--show']]: this.state.purchase
-           })}>
-             <p>Thank You For Your Purchase</p>
-           </div>
+          <div className={classNames({
+            [styles.Checkout__form__messages]: true,
+            [styles['Checkout__form__messages--show']]: this.state.purchase
+          })}>
+            <p>Thank You For Your Purchase</p>
+          </div>
 
-         </form>
-         <div className={styles.Checkout__overlay}></div>
-         <div className={
+        </form>
+        <div className={styles.Checkout__overlay} />
+        <div className={
              classNames({
                [styles.Checkout__httpsWarning]: true,
                [styles['Checkout__httpsWarning--show']]: window.location.protocol !== 'https:'
              })
          }>
-           <p>HTTPS required</p>
-         </div>
-         <div className={styles.Checkout__powered}>
-           <LogoConekta />
-         </div>
-       </div>
+          <p>HTTPS required</p>
+        </div>
+        <div className={styles.Checkout__powered}>
+          <LogoConekta />
+        </div>
+      </div>
     )
   }
 }

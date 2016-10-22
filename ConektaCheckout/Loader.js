@@ -7,9 +7,9 @@ function Loader (props) {
       version='1.1' id='L3'
       x='0px' y='0px'
       viewBox='0 0 100 100'
-      enable-background='new 0 0 0 0'>
-      <circle fill='none' stroke='#fff' stroke-width='4' cx='50' cy='50' r='44' style={{opacity: 0.5}} />
-      <circle fill='#fff' stroke='#e74c3c' stroke-width='3' cx='8' cy='54' r='6' >
+      enableBackground='new 0 0 0 0'>
+      <circle fill='none' stroke='#fff' strokeWidth='4' cx='50' cy='50' r='44' style={{opacity: 0.5}} />
+      <circle fill='#fff' stroke='#e74c3c' strokeWidth='3' cx='8' cy='54' r='6' >
         <animateTransform
           attributeName='transform'
           dur='2s'
