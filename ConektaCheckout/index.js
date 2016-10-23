@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import 'whatwg-fetch'
 import classNames from 'classnames'
@@ -192,8 +193,8 @@ class ReactConektaCheckout extends React.Component {
 }
 
 ReactConektaCheckout.propTypes = {
-  publicKey: React.PropTypes.string.isRequired,
-  show: React.PropTypes.bool
+  publicKey: PropTypes.string.isRequired,
+  show: PropTypes.bool
 }
 
 export default ReactConektaCheckout
